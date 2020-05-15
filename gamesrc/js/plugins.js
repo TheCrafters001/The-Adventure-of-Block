@@ -22,5 +22,6 @@ var $plugins =
 {"name":"GALV_MessageSoundEffects","status":true,"description":"Play sound effects when during Show Text event commands.","parameters":{"Delay Time":"5","Default Talk SE":"Cursor1,80,150","Default Confirm SE":"Cursor2,80,150","-----------":"","Quick SE 1":"","Quick SE 2":"","Quick SE 3":"","Quick SE 4":""}},
 {"name":"GALV_RollCredits","status":true,"description":"(v.1.5) A plugin that calls a new scene to display scrolling information located in an external text file.","parameters":{"Folder":"data","Skippable":"true","Block Skipping":"true","Title Menu":"Credits","Title Credits Music":"00 - Tanner Helland - AMemoryAway"}},
 {"name":"--------------------","status":true,"description":"------------------------------------------------------------","parameters":{}},
-{"name":"TC001_Custom_Plugin","status":true,"description":"Custom Plugins for TheCrafters001 RPG Maker MV Games.","parameters":{"Game_Title":"The Adventure of Block","Game_Author":"TheCrafters001"}}
+{"name":"TC001_Custom_Plugin","status":true,"description":"Custom Plugins for TheCrafters001 RPG Maker MV Games.","parameters":{"Game_Title":"The Adventure of Block","Game_Author":"TheCrafters001"}},
+{"name":"GameJolt","status":true,"description":"Use the GameJolt API in your RPG Maker MV game.","parameters":{"Game ID":"496730","Private Key":"269d4e63bd603ce5e503b1a913a2c8f4","Login on start":"true","Use login dialog if available":"true","Add button to main menu":"true","Show notifications":"true","Trophy notification text":"You got a trophy!"}}
 ];
