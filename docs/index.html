@@ -2,88 +2,86 @@
 <html lang="en">
     <head>
         <title>The Adventure of Block</title>
-        <meta name="title" content="The Adventure of Block">
-        <meta name="description" content="TheCrafters001 - Redefining Free! Open-source software, and games for you! My software is fast, and free! This way, you are in control of your PC!">
-        <meta name="keywords" content="TheCrafters001, Crafters, TC001, Pokemon, Delta Green, software, games, open-source, the adventure of block">
-        <meta name="robots" content="index, follow">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="language" content="English">
-        <meta name="revisit-after" content="1 days">
-        <meta name="author" content="TheCrafters001">
-        <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png?v=8jM6j7gd6E">
-        <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png?v=8jM6j7gd6E">
-        <link rel="icon" type="image/png" sizes="192x192" href="/ico/android-chrome-192x192.png?v=8jM6j7gd6E">
-        <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png?v=8jM6j7gd6E">
-        <link rel="manifest" href="/ico/site.webmanifest?v=8jM6j7gd6E">
-        <link rel="shortcut icon" href="/ico/favicon.ico?v=8jM6j7gd6E">
-        <meta name="apple-mobile-web-app-title" content="TheCrafters001">
-        <meta name="application-name" content="TheCrafters001">
-        <meta name="msapplication-TileColor" content="#004000">
-        <meta name="msapplication-TileImage" content="/ico/mstile-144x144.png?v=8jM6j7gd6E">
-        <meta name="msapplication-config" content="/ico/browserconfig.xml?v=8jM6j7gd6E">
-        <meta name="theme-color" content="#004000">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/css/uikit.min.css"/>
+        <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-        <h1 align="center">The Adventure of Block</h1>
-        <hr>
-        <h3><a href="./play/">Play</a></h3>
-        <p>The demo above is a very early version of the game. Assets & music are still being worked on, and you will be taken to a test room with not a lot in it.<br>
-		There IS some elements of the main story in the intro, and an intro movie is rendered, but all is subject to change.</p>
-		<hr>
-		<p>Version: 0.0.2 - Updated <abbr class="timeago" title="2020-05-15T19:50:14.398Z">May 15th, 2020 @ 3:50 PM</abbr></p>
-		<script src="//unpkg.com/timeago.js"></script>
-		<script>
-		(function timeAgo(selector) {
+        <div class="uk-container">
+            <h1 align="center">The Adventure of Block</h1>
+            <hr>
+            <div class="uk-alert-warning" uk-alert>
+                <p><b>Notice</b>: I am no longer doing browser builds. If you want the latest build, please visit the <a href="https://gamejolt.com/games/TAOB/496730">GameJolt</a> or <a href="https://thecrafters001.itch.io/the-adventure-of-block">Itch.IO page.</a></p>
+            </div>
+            <h3>
+                <a href="./play/">
+                    Play
+                </a>
+            </h3>
+            <p>The demo above is a very early version of the game. Assets & music are still being worked on, and you will be taken to a test room with not a lot in it.<br>
+            There IS some elements of the main story in the intro, and an intro movie is rendered, but all is subject to change.</p>
+            <hr>
+            <p>Version: 0.0.2 - Updated <abbr class="timeago" title="2020-05-15T19:50:14.398Z">May 15th, 2020 @ 3:50 PM</abbr></p>
+        </div>
 
-    var templates = {
-        prefix: "",
-        suffix: " ago",
-        seconds: "less than a minute",
-        minute: "about a minute",
-        minutes: "%d minutes",
-        hour: "about an hour",
-        hours: "about %d hours",
-        day: "a day",
-        days: "%d days",
-        month: "about a month",
-        months: "%d months",
-        year: "about a year",
-        years: "%d years"
-    };
-    var template = function (t, n) {
-        return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n)));
-    };
-
-    var timer = function (time) {
-        if (!time) return;
-        time = time.replace(/\.\d+/, ""); // remove milliseconds
-        time = time.replace(/-/, "/").replace(/-/, "/");
-        time = time.replace(/T/, " ").replace(/Z/, " UTC");
-        time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
-        time = new Date(time * 1000 || time);
-
-        var now = new Date();
-        var seconds = ((now.getTime() - time) * .001) >> 0;
-        var minutes = seconds / 60;
-        var hours = minutes / 60;
-        var days = hours / 24;
-        var years = days / 365;
-
-        return templates.prefix + (
-        seconds < 45 && template('seconds', seconds) || seconds < 90 && template('minute', 1) || minutes < 45 && template('minutes', minutes) || minutes < 90 && template('hour', 1) || hours < 24 && template('hours', hours) || hours < 42 && template('day', 1) || days < 30 && template('days', days) || days < 45 && template('month', 1) || days < 365 && template('months', days / 30) || years < 1.5 && template('year', 1) || template('years', years)) + templates.suffix;
-    };
-
-    var elements = document.getElementsByClassName('timeago');
-    for (var i in elements) {
-        var $this = elements[i];
-        if (typeof $this === 'object') {
-            $this.innerHTML = timer($this.getAttribute('title') || $this.getAttribute('datetime'));
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/js/uikit.min.js" 
+                integrity="sha256-8QekXFS5Mxv+c4TrPQY01b+3GUCDKMEtUT4hwe79u+U=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/js/uikit-icons.min.js" 
+                integrity="sha256-ePbnCL/UfOwc7bXqeMgyTNf6wM1HoqaY1ZeDQWYSJ9Y=" crossorigin="anonymous"></script>
+        <script src="//unpkg.com/timeago.js"></script>
+        <script>
+            (function timeAgo(selector) {
+    
+        var templates = {
+            prefix: "",
+            suffix: " ago",
+            seconds: "less than a minute",
+            minute: "about a minute",
+            minutes: "%d minutes",
+            hour: "about an hour",
+            hours: "about %d hours",
+            day: "a day",
+            days: "%d days",
+            month: "about a month",
+            months: "%d months",
+            year: "about a year",
+            years: "%d years"
+        };
+        var template = function (t, n) {
+            return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n)));
+        };
+    
+        var timer = function (time) {
+            if (!time) return;
+            time = time.replace(/\.\d+/, ""); // remove milliseconds
+            time = time.replace(/-/, "/").replace(/-/, "/");
+            time = time.replace(/T/, " ").replace(/Z/, " UTC");
+            time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); // -04:00 -> -0400
+            time = new Date(time * 1000 || time);
+    
+            var now = new Date();
+            var seconds = ((now.getTime() - time) * .001) >> 0;
+            var minutes = seconds / 60;
+            var hours = minutes / 60;
+            var days = hours / 24;
+            var years = days / 365;
+    
+            return templates.prefix + (
+            seconds < 45 && template('seconds', seconds) || seconds < 90 && template('minute', 1) || minutes < 45 && template('minutes', minutes) || minutes < 90 && template('hour', 1) || hours < 24 && template('hours', hours) || hours < 42 && template('day', 1) || days < 30 && template('days', days) || days < 45 && template('month', 1) || days < 365 && template('months', days / 30) || years < 1.5 && template('year', 1) || template('years', years)) + templates.suffix;
+        };
+    
+        var elements = document.getElementsByClassName('timeago');
+        for (var i in elements) {
+            var $this = elements[i];
+            if (typeof $this === 'object') {
+                $this.innerHTML = timer($this.getAttribute('title') || $this.getAttribute('datetime'));
+            }
         }
-    }
-    // update time every minute
-    setTimeout(timeAgo, 60000);
-
-})();
-		</script>
+        // update time every minute
+        setTimeout(timeAgo, 60000);
+    
+    })();
+        </script>
     </body>
 </html>
